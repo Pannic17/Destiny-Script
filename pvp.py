@@ -1,35 +1,25 @@
+import sys
 import time
 from random import random, randint
 
 import pydirectinput
 
+
+def terminate(signum, frame):
+    sys.exit()
+
+
 if __name__ == '__main__':
     time.sleep(3)
 
-    for i in range(100):
-        pydirectinput.press("w")
-        # pydirectinput.mouseDown()
-        pydirectinput.moveTo(120, 70)
-        time.sleep(1)
-        pydirectinput.press("w")
-        time.sleep(1)
-        pydirectinput.moveTo(960, 690)
-        # pydirectinput.mouseUp()
-        time.sleep(1)
-        pydirectinput.press("c")
-        pydirectinput.press("w")
-        time.sleep(1)
-        pydirectinput.press("w")
-        time.sleep(1)
-        pydirectinput.press("w")
-        # pydirectinput.mouseDown()
-        pydirectinput.press("w")
-        time.sleep(1)
-        pydirectinput.moveTo(randint(200, 1000), randint(60, 690))
-        time.sleep(1)
-        pydirectinput.press("w")
-        pydirectinput.press("v")
-        time.sleep(1)
-        pydirectinput.press("w")
-        # pydirectinput.mouseUp()
-        time.sleep(1)
+    key_list = ["w", "q", "c", "v", "a", "s", "d", "space"]
+
+    for i in range(1000):
+        choice = randint(0, 9)
+        if choice < 3:
+            pydirectinput.press(key_list[randint(0, 7)])
+        elif choice < 6:
+            pydirectinput.moveTo(randint(200, 1400), randint(100, 700))
+        elif choice < 9:
+            pydirectinput.click()
+        time.sleep(random() * 1)
