@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     key_list = ["w", "q", "c", "v", "a", "s", "d", "space"]
 
-    for i in range(1000):
+    for index in range(1000):
         choice = randint(0, 9)
         if choice < 3:
             pydirectinput.press(key_list[randint(0, 7)])

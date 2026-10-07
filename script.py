@@ -11,22 +11,22 @@ def buy():
 
     time.sleep(1)
 
-    for i in range(100):
-        print('NO.' + str(i) + ' exchange')
+    for ix in range(100):
+        print('NO.' + str(ix) + ' exchange')
         pydirectinput.click(900, 120)
         time.sleep(1)
 
     time.sleep(1)
 
-    for i in range(24):
-        print('NO.' + str(i) + ' purchase')
+    for ix in range(24):
+        print('NO.' + str(ix) + ' purchase')
         pydirectinput.click(750, 120)
         time.sleep(1)
 
 
 def iterate():
-    for i in range(46):
-        print('NO.' + str(i) + ' iteration')
+    for ix in range(46):
+        print('NO.' + str(ix) + ' iteration')
         pydirectinput.click(600, 300)
         time.sleep(1)
         pydirectinput.click(240, 550)
@@ -34,7 +34,7 @@ def iterate():
         pydirectinput.click(1200, 550)
         time.sleep(1)
 
-        for i in range(9):
+        for ix in range(9):
             pydirectinput.moveTo(480, 580)
             pydirectinput.mouseDown(480, 580)
             time.sleep(3)
@@ -50,7 +50,7 @@ def iterate():
         time.sleep(1)
         pydirectinput.moveTo(1000, 180)
 
-        for i in range(9):
+        for ix in range(9):
             pydirectinput.press("f")
             time.sleep(0.5)
             pydirectinput.keyDown("f")
@@ -71,7 +71,7 @@ def random():
 if __name__ == '__main__':
     time.sleep(3)
 
-    for i in range(1):
+    for ix in range(1):
 
         time_start = time.time()
 
@@ -88,7 +88,7 @@ if __name__ == '__main__':
         time_cost = time.time() - time_start
 
         print("#####################################")
-        print("NO." + str(i) + "FINISHED  TIME::" + str(time_cost))
+        print("NO." + str(ix) + "FINISHED  TIME::" + str(time_cost))
         print("#####################################")
 
     # mouse = PyMouse()
